@@ -6,9 +6,8 @@ services:
     restart: always
     environment:
       # default postgresql admin
-      POSTGRES_USER: "${POSTGRESQL_USER}"
       POSTGRES_PASSWORD: "${POSTGRESQL_PASSWORD}"
-      # default postgresql database that will be created
+      # default postgresql database that also will be created
       POSTGRES_DB: "${POSTGRESQL_DEFAULT_DB}"
     ports:
       - "${POSTGRESQL_EXPOSED_PORT}:5432"
